@@ -30,7 +30,7 @@ twitter_username: wapacz
 github_username:  wapacz
 
 # Build settings
-theme: jekyll-theme-hacker
+theme: minima
 plugins:
   - jekyll-feed
 
