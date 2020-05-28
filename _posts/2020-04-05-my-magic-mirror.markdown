@@ -7,3 +7,4 @@ tags:
 - magic mirror
 ---
 
+![lunch tool address.png](/uploads/lunch%20tool%20address.png)
