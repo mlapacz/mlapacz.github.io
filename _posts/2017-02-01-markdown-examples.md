@@ -1,5 +1,6 @@
 ---
-title:  "Markdown examples"
+title: Markdown examples
+date: 2017-02-01 00:00:00 Z
 layout: post
 ---
 

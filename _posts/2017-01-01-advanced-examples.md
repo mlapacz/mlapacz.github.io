@@ -1,5 +1,6 @@
 ---
-title:  "Advanced examples"
+title: Advanced examples
+date: 2017-01-01 00:00:00 Z
 mathjax: true
 layout: post
 ---
