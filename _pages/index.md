@@ -1,8 +1,8 @@
 ---
-layout: defaults/page
-permalink: index.html
-narrow: true
 title: Welcome to Friday Theme
+permalink: index.html
+layout: defaults/page
+narrow: true
 ---
 
 ## What is it?

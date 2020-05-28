@@ -1,10 +1,11 @@
 ---
-title:  How to use Single Images
+title: How to use Single Images
+date: 2017-10-13 00:00:00 +02:00
 tags:
-  - Friday Theme
-  - HTML
-  - images
-  - Markdown
+- Friday Theme
+- HTML
+- images
+- Markdown
 ---
 
 Here's how to put a single image into a post, using a Bootstrap 4 card. This shows how to mingle Markdown with HTML, too.

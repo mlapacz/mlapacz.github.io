@@ -1,8 +1,9 @@
 ---
 title: How to write code, with syntax highlighting
+date: 2018-03-10 00:00:00 +01:00
 tags:
-  - syntax highlighting
-  - code
+- syntax highlighting
+- code
 ---
 
 This post demonstrates both inline code and code blocks with syntax highlighting.

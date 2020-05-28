@@ -1,9 +1,10 @@
 ---
-title:  How to use Icons
+title: How to use Icons
+date: 2017-10-18 00:00:00 +02:00
 tags:
-  - icons
-  - Friday Theme
-  - CSS
+- icons
+- Friday Theme
+- CSS
 ---
 
 Here's how to use the Entypo icons in the Friday Theme as SVGs It's easy with Jekyll's include tag and Bootstrap 4 classes.
