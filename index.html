@@ -1,10 +1,393 @@
----
-title: Home
-layout: default
----
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Michał Łapacz · Software developer, Kraków</title>
+  <meta name="description" content="Twenty years of software in Ericsson's orbit: AXE exchanges in PLEX-C, network management in Java, cloud-native prototypes in Go and WebAssembly, and now an AWS platform for generative-AI projects.">
+  <meta name="author" content="Michał Łapacz">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f3f3f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d0f12" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://mlapacz.github.io/">
+  <link rel="icon" href="assets/img/mark.svg" type="image/svg+xml">
 
-{% if site.show_excerpts %}
-  {% include home.html %}
-{% else %}
-  {% include archive.html title="Posts" %}
-{% endif %}
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Michał Łapacz · From PLEX-C to WebAssembly">
+  <meta property="og:description" content="Senior software developer at Ericsson, Kraków. Twenty years from AXE exchanges to cloud platforms for generative AI.">
+  <meta property="og:url" content="https://mlapacz.github.io/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://mlapacz.github.io/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preload" href="assets/fonts/Archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/CommitMono-VF.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- apply a saved theme before first paint so there is no flash -->
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Michał Łapacz",
+    "alternateName": "Michal Lapacz",
+    "jobTitle": "Senior Software Developer",
+    "worksFor": { "@type": "Organization", "name": "Ericsson" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Kraków", "addressCountry": "PL" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Lodz University of Technology" },
+    "knowsLanguage": ["pl", "en"],
+    "url": "https://mlapacz.github.io/",
+    "sameAs": [
+      "https://www.linkedin.com/in/michallapacz/",
+      "https://github.com/wapacz"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="wrap nav__in">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 6h22v7h-6v13H11V13H5z" fill="var(--accent)"/></svg>
+        <span class="brand__text">mlapacz.github.io</span>
+      </a>
+      <nav aria-label="Sections">
+        <ul class="nav__links">
+          <li><a href="#now">Now</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#career">Career</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme" type="button" data-theme-toggle aria-label="Switch theme">Theme</button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ hero ============ -->
+    <section class="wrap hero" id="top" aria-label="Introduction">
+      <p class="eyebrow"><b>Michał Łapacz</b> · Senior Software Developer, Ericsson · Kraków</p>
+      <h1>
+        <span class="line">From PLEX-C</span>
+        <span class="line">to WebAssembly.</span>
+      </h1>
+      <p class="lede">
+        Twenty years of software, all of it in Ericsson's orbit. I started on the AXE exchanges
+        that carried GSM calls, moved on to the systems that manage mobile networks, and now build
+        the AWS platform behind Ericsson's generative-AI projects.
+      </p>
+      <!--
+        Portrait: drop a square photo at assets/img/portrait.jpg and uncomment.
+        The layout adjusts by itself.
+      <img class="portrait" src="assets/img/portrait.jpg" alt="Michał Łapacz" width="132" height="132">
+      -->
+    </section>
+
+    <!-- ============ stack over time ============ -->
+    <section class="wrap stack" aria-labelledby="stack-title">
+      <div class="stack__head">
+        <h2 id="stack-title">Stack over time</h2>
+        <span>2005 — 2026</span>
+      </div>
+
+      <ul class="stack__rows">
+        <li class="stack__row">
+          <span class="stack__name">PLEX-C</span>
+          <span class="stack__track" aria-hidden="true"><span class="stack__bar" style="--i:0;grid-column:1/10"></span></span>
+          <span class="stack__range">2005–2013</span>
+        </li>
+        <li class="stack__row">
+          <span class="stack__name">C · ENEA OSE</span>
+          <span class="stack__track" aria-hidden="true"><span class="stack__bar" style="--i:1;grid-column:1/10"></span></span>
+          <span class="stack__range">2005–2013</span>
+        </li>
+        <li class="stack__row">
+          <span class="stack__name">Java</span>
+          <span class="stack__track" aria-hidden="true"><span class="stack__bar" style="--i:2;grid-column:9/20"></span></span>
+          <span class="stack__range">2013–2023</span>
+        </li>
+        <li class="stack__row">
+          <span class="stack__name">C# · .NET</span>
+          <span class="stack__track" aria-hidden="true"><span class="stack__bar" style="--i:3;grid-column:9/11"></span></span>
+          <span class="stack__range">2013–2014</span>
+        </li>
+        <li class="stack__row">
+          <span class="stack__name">JavaScript</span>
+          <span class="stack__track" aria-hidden="true"><span class="stack__bar" data-now style="--i:4;grid-column:9/23"></span></span>
+          <span class="stack__range">2013–now</span>
+        </li>
+        <li class="stack__row">
+          <span class="stack__name">Docker</span>
+          <span class="stack__track" aria-hidden="true"><span class="stack__bar" data-now style="--i:5;grid-column:10/23"></span></span>
+          <span class="stack__range">2014–now</span>
+        </li>
+        <li class="stack__row">
+          <span class="stack__name">Kubernetes</span>
+          <span class="stack__track" aria-hidden="true"><span class="stack__bar" data-now style="--i:6;grid-column:14/23"></span></span>
+          <span class="stack__range">2018–now</span>
+        </li>
+        <li class="stack__row">
+          <span class="stack__name">Python</span>
+          <span class="stack__track" aria-hidden="true"><span class="stack__bar" data-now style="--i:7;grid-column:17/23"></span></span>
+          <span class="stack__range">2021–now</span>
+        </li>
+        <li class="stack__row">
+          <span class="stack__name">Go</span>
+          <span class="stack__track" aria-hidden="true"><span class="stack__bar" data-now style="--i:8;grid-column:17/23"></span></span>
+          <span class="stack__range">2021–now</span>
+        </li>
+        <li class="stack__row">
+          <span class="stack__name">WebAssembly</span>
+          <span class="stack__track" aria-hidden="true"><span class="stack__bar" data-now style="--i:9;grid-column:17/23"></span></span>
+          <span class="stack__range">2021–now</span>
+        </li>
+        <li class="stack__row">
+          <span class="stack__name">AWS · CloudFormation</span>
+          <span class="stack__track" aria-hidden="true"><span class="stack__bar" data-now style="--i:10;grid-column:19/23"></span></span>
+          <span class="stack__range">2023–now</span>
+        </li>
+        <li class="stack__row">
+          <span class="stack__name">GenAI · LLM</span>
+          <span class="stack__track" aria-hidden="true"><span class="stack__bar" data-now style="--i:11;grid-column:19/23"></span></span>
+          <span class="stack__range">2023–now</span>
+        </li>
+      </ul>
+
+      <div class="stack__axis" aria-hidden="true">
+        <span></span>
+        <span class="stack__ticks">
+          <i style="--c:1">2005</i>
+          <i style="--c:6">2010</i>
+          <i style="--c:11">2015</i>
+          <i style="--c:16">2020</i>
+          <i style="--c:21">2025</i>
+        </span>
+        <span></span>
+      </div>
+
+      <p class="stack__note">
+        <span class="swatch swatch--now" aria-hidden="true"></span>still in use
+        &nbsp;&nbsp;
+        <span class="swatch" aria-hidden="true"></span>retired, not forgotten
+      </p>
+    </section>
+
+    <!-- ============ now ============ -->
+    <section class="wrap section" id="now" aria-labelledby="now-title">
+      <h2 class="section__label" id="now-title">Now</h2>
+      <div class="section__body">
+        <p>
+          Since December 2023 I have been building the AWS platform on which Ericsson's
+          generative-AI and LLM projects run. Everything is defined in CloudFormation, so an
+          environment is a reviewable file rather than a sequence of clicks. Day to day that
+          means Python, Docker, CI/CD pipelines, and the security boundaries that let research
+          teams move quickly without leaking anything.
+        </p>
+        <p>
+          Before that I spent two years in the Standardization &amp; Technologies department
+          writing cloud-native prototypes: Mobile Network as a Service, intent-based handling,
+          and a browser-based modeller whose core is Go compiled to WebAssembly. Most of what
+          one writes in R&amp;D exists to settle a question; knowing when to delete it is part
+          of the job.
+        </p>
+        <p>
+          Off the clock I read Rust and Kotlin, write JavaScript for the fun of it, and keep a
+          soft spot for Erlang, which solved concurrency and fault tolerance long before the
+          cloud rediscovered both.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ how I work ============ -->
+    <section class="wrap section" aria-labelledby="how-title">
+      <h2 class="section__label" id="how-title">How I work</h2>
+      <div class="section__body">
+        <ul class="stances">
+          <li>
+            <b>T-shaped, with a fat stem.</b>
+            Deep in telecom and cloud infrastructure; wide enough across languages, from PLEX-C
+            to Go, to choose the right one rather than the familiar one.
+          </li>
+          <li>
+            <b>Mature beats novel, until it doesn't.</b>
+            I judge a technology by how it fails under load, not by how it demos. Erlang earned
+            my respect that way. Most frameworks have not.
+          </li>
+          <li>
+            <b>Functional by default.</b>
+            Immutable data and small pure functions are how a codebase stays understandable in
+            year twenty. I have maintained enough year-twenty code to mean it.
+          </li>
+          <li>
+            <b>The pipeline is part of the product.</b>
+            From PowerPC boards to Kubernetes I have owned the build and the deployment as much
+            as the code. A feature that cannot be shipped repeatably is not finished.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ selected work ============ -->
+    <section class="wrap section" id="work" aria-labelledby="work-title">
+      <h2 class="section__label" id="work-title">Selected work</h2>
+      <div class="section__body">
+        <ul class="work">
+          <li>
+            <div class="work__meta"><span>2023 — now</span><span>Ericsson</span></div>
+            <h3>A GenAI platform on AWS</h3>
+            <p>
+              A CloudFormation-defined AWS platform that gives Ericsson's generative-AI and LLM
+              teams secure, repeatable environments to build on. Scalable where it must be,
+              locked down where it can be, and cheap enough to iterate on.
+            </p>
+            <p class="tech">AWS · CloudFormation · Python · Docker · CI/CD</p>
+          </li>
+          <li>
+            <div class="work__meta"><span>2021 — 2023</span><span>Ericsson, Standardization &amp; Technologies</span></div>
+            <h3>A cloud modeller in Go, running in the browser</h3>
+            <p>
+              A drag-and-drop web application for building abstract models of cloud
+              deployments. The modelling core is Go compiled to WebAssembly and runs
+              client-side; the interface is lit-html talking to the backend over WebSocket.
+              Built alongside prototypes for Mobile Network as a Service and intent-based
+              handling, with the whole GitLab CI pipeline owned by the same small team.
+            </p>
+            <p class="tech">Go · WebAssembly · JavaScript · lit-html · WebSocket · Kubernetes · Helm · Python · Ansible · ELK · InfluxDB · Leaflet.js · GitLab CI</p>
+          </li>
+          <li>
+            <div class="work__meta"><span>2021 — 2023</span><span>charity project</span></div>
+            <h3>School management for hospital schools</h3>
+            <p>
+              A management system for the schools that operate inside hospitals, where pupils
+              come and go with their treatment and every record is sensitive. I was its
+              developer and architect.
+            </p>
+            <p class="tech">Java 11 · Spring Boot · PostgreSQL · Hibernate · Angular 10 · Maven</p>
+          </li>
+          <li>
+            <div class="work__meta"><span>2020 — 2021</span><span>Ericsson</span></div>
+            <h3>The Configuration Tool, inside ENM</h3>
+            <p>
+              Placing the Ericsson Configuration Tool inside Ericsson Network Manager as a
+              proper part of it. The task had been labelled seemingly impossible before the
+              team took it on. It shipped.
+            </p>
+            <p class="tech">Java · JavaScript · UISDK (Backbone.js)</p>
+          </li>
+          <li>
+            <div class="work__meta"><span>2018 — 2020</span><span>Ericsson</span></div>
+            <h3>DHCP management for ENM</h3>
+            <p>
+              Backend and frontend for manipulating DHCP entries from within Ericsson Network
+              Manager, plus the new ENM services around it.
+            </p>
+            <p class="tech">Java 8 · JavaScript · Maven</p>
+          </li>
+          <li>
+            <div class="work__meta"><span>2005 — 2013</span><span>Ericpol, for Ericsson</span></div>
+            <h3>AXE exchanges, in PLEX-C</h3>
+            <p>
+              Embedded subsystems for the AXE exchanges of the GSM network, the BSC among them:
+              PowerPC boards running ENEA OSE, written in PLEX-C, Ericsson's own language, and
+              ANSI C. Eight years of it, including a long stretch on site in Linköping.
+            </p>
+            <p class="tech">PLEX-C · ANSI C · PowerPC · ENEA OSE</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ career ============ -->
+    <section class="wrap section" id="career" aria-labelledby="career-title">
+      <h2 class="section__label" id="career-title">Career</h2>
+      <div class="section__body section__body--wide">
+        <table class="ledger">
+          <tbody>
+            <tr>
+              <th scope="row">2023 — now</th>
+              <td class="org">Ericsson<small>Kraków</small></td>
+              <td class="what">Senior Software Developer, Master. AWS and CloudFormation platform for generative-AI and LLM projects.</td>
+            </tr>
+            <tr>
+              <th scope="row">2021 — 2023</th>
+              <td class="org">Ericsson<small>Kraków</small></td>
+              <td class="what">Cloud-native R&amp;D in Standardization &amp; Technologies: prototypes for Mobile Network as a Service and intent-based handling; Go, WebAssembly, Kubernetes. In parallel, architect of a charity school-management system.</td>
+            </tr>
+            <tr>
+              <th scope="row">2018 — 2021</th>
+              <td class="org">Ericsson<small>Kraków</small></td>
+              <td class="what">Ericsson Network Manager: a DHCP management service, then bringing the Configuration Tool inside ENM. Java, JavaScript.</td>
+            </tr>
+            <tr>
+              <th scope="row">2016 — 2018</th>
+              <td class="org">Ericsson<small>Kraków</small></td>
+              <td class="what">Architect in the OSS project, directly at Ericsson after it acquired Ericpol. Java EE, microservices, KVM, Docker, Backbone.js.</td>
+            </tr>
+            <tr>
+              <th scope="row">2013 — 2016</th>
+              <td class="org">Ericpol<small>Kraków</small></td>
+              <td class="what">Expert software developer. Full stack on Ericsson's OSS project; in the R&amp;D unit, .NET applications for EurotaxGlass and a Liferay registration front end for the Dr Eryk medical system.</td>
+            </tr>
+            <tr>
+              <th scope="row">2010 — 2013</th>
+              <td class="org">Ericpol<small>Łódź</small></td>
+              <td class="what">Senior software developer. Team lead of the maintenance team, then Scrum Master after the company went agile. Embedded PowerPC and OSE work continued; roughly half the period on contract at Ericsson in Linköping, Sweden.</td>
+            </tr>
+            <tr>
+              <th scope="row">2005 — 2010</th>
+              <td class="org">Ericpol<small>Kraków</small></td>
+              <td class="what">Software developer. Designer in Ericsson's GSM area: AXE exchange embedded subsystems on ENEA OSE, in PLEX-C and ANSI C.</td>
+            </tr>
+            <tr>
+              <th scope="row">2000 — 2005</th>
+              <td class="org">Lodz University of Technology<small>Łódź</small></td>
+              <td class="what"><em>Master's degree.</em></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="certs">
+          Professional Scrum Master I, scrum.org, 2012 &nbsp;·&nbsp;
+          BerkeleyX CS169.1x and CS169.2x, Software as a Service, edX, 2012–2013
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ contact ============ -->
+    <section class="wrap section" id="contact" aria-labelledby="contact-title">
+      <h2 class="section__label" id="contact-title">Contact</h2>
+      <div class="section__body">
+        <p>
+          Based in Kraków, working hybrid. Polish is my first language, English my working one.
+          The quickest way to reach me is LinkedIn.
+        </p>
+        <p>
+          On GitHub, the recent repository worth a look is
+          <a href="https://github.com/wapacz/agent-comm">agent-comm</a>: a relay that fronts
+          several coding-agent sessions with a browser terminal and an A2A HTTP surface.
+        </p>
+        <ul class="contact">
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/michallapacz/">linkedin.com/in/michallapacz</a></li>
+          <li><span>GitHub</span><a href="https://github.com/wapacz">github.com/wapacz</a></li>
+          <!-- <li><span>Email</span><a href="mailto:you@example.com">you@example.com</a></li> -->
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="wrap foot">
+    <p>© 2026 Michał Łapacz</p>
+    <p>Hand-written HTML and CSS. No framework, no tracking. Set in Archivo and Commit Mono, self-hosted.</p>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

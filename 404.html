@@ -1,11 +1,30 @@
----
-title: '404: Page not found'
-permalink: "/404.html"
-layout: default
-sitemap: false
----
-
-<article>
-  <header><h1>404</h1></header>
-  <p>Page not found</p>
-</article>
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 · Michał Łapacz</title>
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="/assets/img/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav__in">
+      <a class="brand" href="/">
+        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 6h22v7h-6v13H11V13H5z" fill="var(--accent)"/></svg>
+        <span class="brand__text">mlapacz.github.io</span>
+      </a>
+      <button class="theme" type="button" data-theme-toggle aria-label="Switch theme">Theme</button>
+    </div>
+  </header>
+  <main class="wrap oops">
+    <p class="eyebrow">HTTP 404</p>
+    <h1>No such page.</h1>
+    <p class="lede">Nothing lives at this address. <a href="/">Back to the start</a>.</p>
+  </main>
+  <script src="/assets/js/site.js"></script>
+</body>
+</html>

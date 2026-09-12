@@ -1,53 +1,40 @@
----
-title: About
-permalink: "/about/"
-layout: page
----
+# mlapacz.github.io
 
-## Installation
+Personal site of Michał Łapacz. Plain static HTML and CSS, no build step, no framework,
+no analytics. Served by GitHub Pages straight from the `master` branch; the `.nojekyll`
+file keeps Jekyll out of the way.
 
-Just fork the repo and adjust the `_config.yml` to use with [Github Pages](https://pages.github.com/) and your page is done.
+## Files
 
-## Features
+| Path | What it is |
+|---|---|
+| `index.html` | The whole site: hero, stack chart, now, how I work, selected work, career, contact |
+| `404.html` | Not-found page in the same style |
+| `assets/css/style.css` | All styling. Colour and type tokens are at the top under `:root` |
+| `assets/js/site.js` | Theme toggle and the chart reveal. The page works without it |
+| `assets/fonts/` | Archivo (OFL) and Commit Mono (MIT), self-hosted so no visitor data goes to Google |
+| `assets/img/mark.svg` | Favicon: the fat T |
 
- - supports dark mode on macOS Mojave
- - optional sidebar
- - MathJax support
- - no external ressources
- - included archive page
- - supports pagination
- - feed generation
- - responsive
- - syntax highlighting
- - supports comments via [disqus](https://disqus.com/) or [isso](http://posativ.org/isso/)
+## Editing
 
-## Based on
+- **Text**: edit `index.html` directly. Each section is marked with a `<!-- ==== name ==== -->` comment.
+- **Stack chart**: each row is a `<li class="stack__row">`. The bar's `grid-column: A/B` maps years
+  to columns as `A = start − 2004` and `B = end − 2003` (2005 is column 1, 2026 is column 22).
+  Add `data-now` to a bar that is still in use; it turns amber.
+- **Photo**: put a square image at `assets/img/portrait.jpg` and uncomment the `<img class="portrait">`
+  block in the hero. The layout adapts on its own.
+- **Email**: uncomment the email row at the end of the contact list and fill in the address.
+- **Colours**: light and dark palettes live in `:root` and `:root[data-theme="dark"]` in `style.css`.
+  The visitor's OS preference is used by default; the button in the top bar overrides it and remembers
+  the choice in `localStorage`.
 
-- [Hyde](https://github.com/poole/hyde)
-- [Minima](https://github.com/jekyll/minima)
-- [Lagrange](https://github.com/LeNPaul/Lagrange)
-- [Font Awesome](http://fontawesome.io/)
-- [KaTeX](https://katex.org/)
-- [Pygments](https://github.com/richleland/pygments-css)
+## Preview locally
 
-## Installation (jekyll-remote-theme method)
-
-You can use this theme with the `jekyll-remote-theme` plugin. Just create an empty repo, copy over the `index.html` file and add this to your `_config.yml`:
-
-```yaml
-remote_theme: niklasbuschmann/contrast@v2.8
-
-plugins:
-  - jekyll-remote-theme
+```bash
+python3 -m http.server 8000
+# then open http://localhost:8000
 ```
 
-## License
+## Deploy
 
-[public domain](http://unlicense.org/)
-
-## Screenshots
-
-![screenshot](https://user-images.githubusercontent.com/4943215/73125194-5f0b8b80-3fa4-11ea-805c-8387187503ad.png)
-
-![screenshot](https://user-images.githubusercontent.com/4943215/73125195-5fa42200-3fa4-11ea-89f8-d09c1d6fe252.png)
-
+Push to `master`. GitHub Pages publishes the root of the branch within a minute or two.
