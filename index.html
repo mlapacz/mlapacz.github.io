@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Michał Łapacz · Software developer, Kraków</title>
-  <meta name="description" content="Twenty years of software in Ericsson's orbit: AXE exchanges in PLEX-C, network management in Java, cloud-native prototypes in Go and WebAssembly, and now an AWS platform for generative-AI projects.">
+  <meta name="description" content="Senior software developer at Ericsson, Kraków. Cloud platforms for generative AI, a RAG application on a knowledge fabric with its own ontology, and code written with AI agents. Twenty years of software, from GSM switches to the cloud.">
   <meta name="author" content="Michał Łapacz">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#f3f3f0" media="(prefers-color-scheme: light)">
@@ -13,8 +13,8 @@
   <link rel="icon" href="assets/img/mark.svg" type="image/svg+xml">
 
   <meta property="og:type" content="profile">
-  <meta property="og:title" content="Michał Łapacz · From PLEX-C to WebAssembly">
-  <meta property="og:description" content="Senior software developer at Ericsson, Kraków. Twenty years from AXE exchanges to cloud platforms for generative AI.">
+  <meta property="og:title" content="Michał Łapacz · Building for GenAI, and with it">
+  <meta property="og:description" content="Senior software developer at Ericsson, Kraków. Cloud platforms for generative AI, RAG on a knowledge fabric, code written with AI agents. Twenty years of software behind it.">
   <meta property="og:url" content="https://mlapacz.github.io/">
   <meta property="og:locale" content="en_US">
   <meta property="og:image" content="https://mlapacz.github.io/assets/img/og.png">
@@ -24,7 +24,7 @@
 
   <link rel="preload" href="assets/fonts/Archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/CommitMono-VF.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/style.css?v=3">
+  <link rel="stylesheet" href="assets/css/style.css?v=4">
 
   <!-- before first paint: apply a saved theme (no flash) and mark JS as available
        so scroll-reveal elements start hidden instead of blinking -->
@@ -77,13 +77,14 @@
     <section class="wrap hero" id="top" aria-label="Introduction">
       <p class="eyebrow"><b>Michał Łapacz</b> · Senior Software Developer, Ericsson · Kraków</p>
       <h1>
-        <span class="line">From PLEX-C</span>
-        <span class="line">to WebAssembly.</span>
+        <span class="line">Building for GenAI,</span>
+        <span class="line">and with it.</span>
       </h1>
       <p class="lede">
-        Twenty years of software, all of it in Ericsson's orbit. I started on the AXE exchanges
-        that carried GSM calls, moved on to the systems that manage mobile networks, and now build
-        the AWS platform behind Ericsson's generative-AI projects.
+        I build the AWS platform behind Ericsson's generative-AI projects, a RAG application on a
+        knowledge fabric with its own ontology, and most of my code with AI agents. Behind that,
+        twenty years of software for Ericsson, from the switches that carried GSM calls to the
+        cloud that runs today's networks.
       </p>
       <!--
         Portrait: drop a square photo at assets/img/portrait.jpg and uncomment.
@@ -156,9 +157,14 @@
           <span class="stack__range">2023–now</span>
         </li>
         <li class="stack__row">
-          <span class="stack__name">GenAI · LLM</span>
+          <span class="stack__name">GenAI · LLM · RAG</span>
           <span class="stack__track" aria-hidden="true"><span class="stack__bar" data-now style="--i:11;grid-column:19/23"></span></span>
           <span class="stack__range">2023–now</span>
+        </li>
+        <li class="stack__row">
+          <span class="stack__name">Coding agents</span>
+          <span class="stack__track" aria-hidden="true"><span class="stack__bar" data-now style="--i:12;grid-column:21/23"></span></span>
+          <span class="stack__range">2025–now</span>
         </li>
       </ul>
 
@@ -193,11 +199,15 @@
           teams move quickly without leaking anything.
         </p>
         <p>
-          Before that I spent two years in the Standardization &amp; Technologies department
-          writing cloud-native prototypes: Mobile Network as a Service, intent-based handling,
-          and a browser-based modeller whose core is Go compiled to WebAssembly. Most of what
-          one writes in R&amp;D exists to settle a question; knowing when to delete it is part
-          of the job.
+          Alongside that I am building a RAG application on a knowledge fabric. An ontology
+          describes the entities and relations of the domain, so retrieval follows the
+          structure of the knowledge instead of relying on vector similarity alone.
+        </p>
+        <p>
+          Most of my code now starts as a conversation with an agent. I work with Claude Code
+          and Pi every day, keep my agent setup and self-written extensions under version
+          control, and wrote a relay that puts several Pi sessions in the browser. The agents
+          draft; I decide what ships.
         </p>
         <p>
           Off the clock I read Rust and Kotlin, write JavaScript for the fun of it, and keep a
@@ -242,6 +252,31 @@
       <div class="section__body">
         <ul class="work">
           <li>
+            <div class="work__meta"><span>2025 — now</span></div>
+            <h3>RAG on a knowledge fabric</h3>
+            <p>
+              A retrieval-augmented generation application whose retrieval is organised by a
+              knowledge fabric: an ontology defines the entities and relations of the domain,
+              so answers are grounded in the structure of the knowledge, not only in vector
+              similarity.
+            </p>
+            <p class="tech">RAG · Knowledge fabric · Ontology · LLMs</p>
+          </li>
+          <li>
+            <div class="work__meta"><span>2026</span><span>open source</span></div>
+            <h3>Tooling for coding agents</h3>
+            <p>
+              <a href="https://github.com/wapacz/agent-comm">agent-comm</a> is a relay that
+              fronts several Pi coding-agent sessions: a real terminal in the browser through
+              xterm.js, plus an A2A HTTP surface so other agents can talk to them. Sessions dial
+              out over WebSocket, so nothing needs an inbound port.
+              <a href="https://github.com/wapacz/agent-setup">agent-setup</a> keeps my agent
+              configuration and self-written extensions, such as automatic AWS SSO re-login,
+              reproducible on any machine.
+            </p>
+            <p class="tech">TypeScript · Node · WebSocket · xterm.js · A2A</p>
+          </li>
+          <li>
             <div class="work__meta"><span>2023 — now</span><span>Ericsson</span></div>
             <h3>A GenAI platform on AWS</h3>
             <p>
@@ -282,15 +317,6 @@
               team took it on. It shipped.
             </p>
             <p class="tech">Java · JavaScript · UISDK (Backbone.js)</p>
-          </li>
-          <li>
-            <div class="work__meta"><span>2018 — 2020</span><span>Ericsson</span></div>
-            <h3>DHCP management for ENM</h3>
-            <p>
-              Backend and frontend for manipulating DHCP entries from within Ericsson Network
-              Manager, plus the new ENM services around it.
-            </p>
-            <p class="tech">Java 8 · JavaScript · Maven</p>
           </li>
           <li>
             <div class="work__meta"><span>2005 — 2013</span><span>Ericpol, for Ericsson</span></div>
@@ -370,9 +396,9 @@
           The quickest way to reach me is LinkedIn.
         </p>
         <p>
-          On GitHub, the recent repository worth a look is
-          <a href="https://github.com/wapacz/agent-comm">agent-comm</a>: a relay that fronts
-          several coding-agent sessions with a browser terminal and an A2A HTTP surface.
+          On GitHub, start with <a href="https://github.com/wapacz/agent-comm">agent-comm</a>
+          and <a href="https://github.com/wapacz/agent-setup">agent-setup</a>, the tooling
+          around my daily work with coding agents.
         </p>
         <ul class="contact">
           <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/michallapacz/">linkedin.com/in/michallapacz</a></li>
@@ -389,6 +415,6 @@
     <p>Hand-written HTML and CSS. No framework, no tracking. Set in Archivo and Commit Mono, self-hosted.</p>
   </footer>
 
-  <script src="assets/js/site.js?v=3"></script>
+  <script src="assets/js/site.js?v=4"></script>
 </body>
 </html>
