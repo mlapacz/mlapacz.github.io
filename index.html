@@ -24,10 +24,11 @@
 
   <link rel="preload" href="assets/fonts/Archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/CommitMono-VF.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=2">
 
-  <!-- apply a saved theme before first paint so there is no flash -->
-  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <!-- before first paint: apply a saved theme (no flash) and mark JS as available
+       so scroll-reveal elements start hidden instead of blinking -->
+  <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 
   <script type="application/ld+json">
   {
@@ -388,6 +389,6 @@
     <p>Hand-written HTML and CSS. No framework, no tracking. Set in Archivo and Commit Mono, self-hosted.</p>
   </footer>
 
-  <script src="assets/js/site.js"></script>
+  <script src="assets/js/site.js?v=2"></script>
 </body>
 </html>

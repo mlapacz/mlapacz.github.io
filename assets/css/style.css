@@ -827,6 +827,35 @@ h3 {
   margin-bottom: 1.25rem;
 }
 
+/* ---------- scroll reveal ----------
+   Elements below the fold start slightly lower and transparent; site.js adds
+   .is-in when they enter the viewport. The selector list is mirrored in site.js.
+   :where() keeps specificity low so .is-in always wins. */
+
+.js :where(
+  .section__label,
+  .section__body > :not(.stances, .work, .contact, .ledger),
+  .stances > li,
+  .work > li,
+  .contact > li,
+  .ledger tbody > tr,
+  .foot > p
+) {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
+}
+
+/* table rows: fade only, transforms on rows are unreliable across engines */
+.js :where(.ledger tbody > tr) {
+  transform: none;
+}
+
+.js .is-in {
+  opacity: 1;
+  transform: none;
+}
+
 /* ---------- motion preference ---------- */
 
 @media (prefers-reduced-motion: reduce) {
@@ -839,6 +868,20 @@ h3 {
   }
 
   .stack__bar {
+    transform: none;
+    transition: none;
+  }
+
+  .js :where(
+    .section__label,
+    .section__body > :not(.stances, .work, .contact, .ledger),
+    .stances > li,
+    .work > li,
+    .contact > li,
+    .ledger tbody > tr,
+    .foot > p
+  ) {
+    opacity: 1;
     transform: none;
     transition: none;
   }

@@ -11,7 +11,7 @@ file keeps Jekyll out of the way.
 | `index.html` | The whole site: hero, stack chart, now, how I work, selected work, career, contact |
 | `404.html` | Not-found page in the same style |
 | `assets/css/style.css` | All styling. Colour and type tokens are at the top under `:root` |
-| `assets/js/site.js` | Theme toggle and the chart reveal. The page works without it |
+| `assets/js/site.js` | Theme toggle, the chart reveal and the scroll-in reveal of sections. The page works without it |
 | `assets/fonts/` | Archivo (OFL) and Commit Mono (MIT), self-hosted so no visitor data goes to Google |
 | `assets/img/mark.svg` | Favicon: the fat T |
 
