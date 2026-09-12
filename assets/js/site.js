@@ -5,7 +5,6 @@
 (function () {
   var root = document.documentElement;
   root.classList.remove("no-js");
-  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // --- theme ---
   var btn = document.querySelector("[data-theme-toggle]");
@@ -69,8 +68,9 @@
     el.classList.add("is-in");
   }
 
+  // (with prefers-reduced-motion the CSS turns this into a plain cross-fade)
   if (items.length) {
-    if (!("IntersectionObserver" in window) || reduceMotion) {
+    if (!("IntersectionObserver" in window)) {
       items.forEach(function (el) {
         show(el, 0);
       });

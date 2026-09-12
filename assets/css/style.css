@@ -856,7 +856,20 @@ h3 {
   transform: none;
 }
 
-/* ---------- motion preference ---------- */
+/* ---------- motion preference ----------
+   With "reduce motion" on, nothing moves: no rise, no growing bars, no smooth
+   scroll. Elements still cross-fade in, which is safe for vestibular
+   sensitivity and keeps the page from looking broken. */
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -864,12 +877,20 @@ h3 {
   }
 
   .hero > * {
-    animation: none;
+    animation-name: fade;
+    animation-duration: 0.5s;
   }
 
   .stack__bar {
     transform: none;
-    transition: none;
+    opacity: 0;
+    transition: opacity 0.5s var(--ease), filter 0.15s;
+    transition-delay: calc(var(--i, 0) * 55ms), 0s;
+  }
+
+  .stack.is-in .stack__bar,
+  .no-js .stack__bar {
+    opacity: 1;
   }
 
   .js :where(
@@ -881,8 +902,7 @@ h3 {
     .ledger tbody > tr,
     .foot > p
   ) {
-    opacity: 1;
     transform: none;
-    transition: none;
+    transition: opacity 0.45s var(--ease);
   }
 }
